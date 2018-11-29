@@ -1,7 +1,7 @@
 {
   "name": "iget-editor",
-  "version": "4.1.0",
-  "description": "WYSIWYG Editor for Angular Applications",
+  "version": "1.0.0",
+  "description": "WYSIWYG Editor for Angular Material applications",
   "license": "MIT",
   "scripts": {
     "build": "ng build --prod",
@@ -26,22 +26,19 @@
     "angular-editor",
     "angular-wysiwyg-editor",
     "wysiwyg-editor",
+    "ngx-editor",
     "iget-editor",
     "angular2-wysiwyg-editor",
     "angular4-wysiwyg-editor"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sibiraj-s/iget-editor.git"
+    "url": "git+https://github.com/iget-master/iget-editor.git"
   },
   "bugs": {
-    "url": "https://github.com/sibiraj-s/iget-editor/issues"
+    "url": "https://github.com/iget-master/iget-editor/issues"
   },
-  "homepage": "https://github.com/sibiraj-s/iget-editor",
-  "peerDependencies": {
-    "font-awesome": "^4.7.0",
-    "ngx-bootstrap": "^3.0.1"
-  },
+  "homepage": "https://github.com/iget-master/iget-editor",
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.11.0",
     "@angular/animations": "^7.1.0",
