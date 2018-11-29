@@ -1,0 +1,24 @@
+<div class="iget-editor"
+     tabindex="0"
+     [style.width]="config['width']"
+     [style.minWidth]="config['minWidth']"
+     (focus)="onEditorFocus()">
+
+  <!-- text area -->
+  <div class="iget-editor-wrapper" #igetEditorWrapper>
+    <div class="iget-editor-textarea" [attr.contenteditable]="config['editable']" (input)="onContentChange($event.target.innerHTML)"
+      [attr.translate]="config['translate']" [attr.spellcheck]="config['spellcheck']" [style.height]="config['height']"
+      [style.minHeight]="config['minHeight']" [style.resize]="Utils?.canResize(resizer)" (focus)="onTextAreaFocus()"
+      (blur)="onTextAreaBlur()" #igetEditorTextArea></div>
+
+    <span class="iget-editor-placeholder">{{ placeholder || config['placeholder'] }}</span>
+  </div>
+
+  <iget-editor-toolbar
+      [config]="config"
+      (execute)="executeCommand($event)">
+  </iget-editor-toolbar>
+
+  <iget-editor-message></iget-editor-message>
+  <iget-editor-grippie *ngIf="resizer === 'stack'"></iget-editor-grippie>
+</div>

@@ -1,0 +1,16 @@
+// Import theming functions
+@import '~@angular/material/theming';
+
+button {
+  &:focus {
+    outline: none;
+  }
+
+  &.mat-button {
+    color: mat-color($mat-gray, 700);
+
+    &:hover {
+      color: mat-color($mat-gray, 900);
+    }
+  }
+}

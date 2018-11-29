@@ -1,0 +1,6 @@
+<button mat-icon-button [title]="title" (click)="handleClick($event)" [matMenuTriggerFor]="menu">
+    <mat-icon>{{ icon }}</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <ng-content select="[mat-menu-item]"></ng-content>
+</mat-menu>

@@ -1,0 +1,13 @@
+.iget-editor-grippie {
+  height: 9px;
+  position: relative;
+  text-align: center;
+  cursor: s-resize;
+
+  svg {
+    position: absolute;
+    top: 1.5px;
+    width: 50%;
+    right: 25%;
+  }
+}

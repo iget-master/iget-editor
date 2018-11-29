@@ -1,0 +1,13 @@
+// Import theming functions
+@import '~@angular/material/theming';
+
+:host {
+  &:not(:first-child) {
+    padding-left: 4px;
+  }
+
+  &:not(:last-child) {
+    padding-right: 4px;
+    border-right: 1px solid mat-color($mat-gray, 300);
+  }
+}

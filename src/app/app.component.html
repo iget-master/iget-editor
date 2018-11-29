@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="logo block">
+    <img src="assets/icons/iget-editor.svg" alt="iget-editor">
+    <h6>A WYSIWYG Editor for Angular Material applications.</h6>
+    <div class="github-buttons">
+      <a class="github-button" href="https://github.com/iget-master/iget-editor/fork" aria-label="Fork iget-master/iget-editor on GitHub">Fork</a>
+      <a class="github-button" href="https://github.com/iget-master/iget-editor" aria-label="Star iget-master/iget-editor on GitHub">Star</a>
+      <a class="github-button" href="https://github.com/iget-master/iget-editor/issues" data-show-count="true" aria-label="Issue iget-master/iget-editor on GitHub">Issue</a>
+      <a class="github-button" href="https://github.com/iget-master/iget-editor/archive/master.zip" aria-label="Download iget-master/iget-editor on GitHub">Download</a>
+    </div>
+  </div>
+
+  <div class="editor block">
+    <iget-editor [config]="editorConfig" [spellcheck]="true" [(ngModel)]="htmlContent"></iget-editor>
+  </div>
+
+  <div *ngIf="htmlContent" class="htmlblock block">
+    <h6>HTML Output</h6>
+    <div class="html">
+      {{ htmlContent }}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>
+      This project is based on
+      <a href="https://github.com/sibiraj-s/ngx-editor">sibiraj-s/ngx-editor</a>,
+      re-written to use <a href="https://material.angular.io/">Angular Material</a>.
+    </p>
+  </div>
+</div>

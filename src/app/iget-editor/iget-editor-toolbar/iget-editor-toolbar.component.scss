@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+:host {
+  display: flex;
+  @include mat-elevation(2);
+}
+.mat-button {
+  padding: 0;
+  min-width: 36px;
+}

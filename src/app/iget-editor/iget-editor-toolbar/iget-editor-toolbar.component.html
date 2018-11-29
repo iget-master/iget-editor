@@ -1,0 +1,60 @@
+<iget-editor-toolbar-group>
+  <iget-editor-toolbar-button icon="format_bold" title="Bold" action="bold"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_italic" title="Italic" action="italic"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_underline" title="Underline" action="underline"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_strikethrough" title="Strikethrough" action="strikethrough"></iget-editor-toolbar-button>
+</iget-editor-toolbar-group>
+<iget-editor-toolbar-group>
+  <iget-editor-toolbar-button icon="font_download" title="Font Family" >
+    <button mat-menu-item (click)="setFontName('sans-serif')">Sans-serif</button>
+    <button mat-menu-item (click)="setFontName('serif')">Serif</button>
+    <button mat-menu-item (click)="setFontName('monospace')">Monospace</button>
+  </iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_size" title="Font size" >
+    <button mat-menu-item (click)="setFontSize('10')">Small</button>
+    <button mat-menu-item (click)="setFontSize('13')">Regular</button>
+    <button mat-menu-item (click)="setFontSize('18')">Large</button>
+    <button mat-menu-item (click)="setFontSize('32')">Huge</button>
+  </iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_color_text" title="Text color">
+    <button mat-menu-item (click)="insertColor('#000', 'textColor')"><mat-icon [style.color]="'#000'">fiber_manual_record</mat-icon>Black</button>
+    <button mat-menu-item (click)="insertColor('#999', 'textColor')"><mat-icon [style.color]="'#999'">fiber_manual_record</mat-icon>Gray</button>
+    <button mat-menu-item (click)="insertColor('#FFF', 'textColor')"><mat-icon [style.color]="'#FFF'">fiber_manual_record</mat-icon>White</button>
+    <button mat-menu-item (click)="insertColor('#F00', 'textColor')"><mat-icon [style.color]="'#F00'">fiber_manual_record</mat-icon>Red</button>
+    <button mat-menu-item (click)="insertColor('#0F0', 'textColor')"><mat-icon [style.color]="'#0F0'">fiber_manual_record</mat-icon>Green</button>
+    <button mat-menu-item (click)="insertColor('#FF0', 'textColor')"><mat-icon [style.color]="'#FF0'">fiber_manual_record</mat-icon>Yellow</button>
+    <button mat-menu-item (click)="insertColor('#00F', 'textColor')"><mat-icon [style.color]="'#00F'">fiber_manual_record</mat-icon>Blue</button>
+  </iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_color_fill" title="Fill color">
+    <button mat-menu-item (click)="insertColor('#000', 'backgroundColor')"><mat-icon [style.color]="'#000'">fiber_manual_record</mat-icon>Black</button>
+    <button mat-menu-item (click)="insertColor('#999', 'backgroundColor')"><mat-icon [style.color]="'#999'">fiber_manual_record</mat-icon>Gray</button>
+    <button mat-menu-item (click)="insertColor('#FFF', 'backgroundColor')"><mat-icon [style.color]="'#FFF'">fiber_manual_record</mat-icon>White</button>
+    <button mat-menu-item (click)="insertColor('#F00', 'backgroundColor')"><mat-icon [style.color]="'#F00'">fiber_manual_record</mat-icon>Red</button>
+    <button mat-menu-item (click)="insertColor('#0F0', 'backgroundColor')"><mat-icon [style.color]="'#0F0'">fiber_manual_record</mat-icon>Green</button>
+    <button mat-menu-item (click)="insertColor('#FF0', 'backgroundColor')"><mat-icon [style.color]="'#FF0'">fiber_manual_record</mat-icon>Yellow</button>
+    <button mat-menu-item (click)="insertColor('#00F', 'backgroundColor')"><mat-icon [style.color]="'#00F'">fiber_manual_record</mat-icon>Blue</button>
+  </iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_clear" title="Clear formatting" action="removeFormat"></iget-editor-toolbar-button>
+</iget-editor-toolbar-group>
+<iget-editor-toolbar-group>
+  <iget-editor-toolbar-button icon="format_align_left" title="Align left" action="justifyLeft"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_align_center" title="Align center" action="justifyCenter"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_align_right" title="Align right" action="justifyRight"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_align_justify" title="Justify" action="justifyFull"></iget-editor-toolbar-button>
+</iget-editor-toolbar-group>
+<iget-editor-toolbar-group>
+  <iget-editor-toolbar-button icon="format_indent_decrease" title="Outdent" action="outdent"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_indent_increase" title="Indent" action="indent"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_quote" title="Blockquote" action="blockquote"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_list_bulleted" title="Unordered list" action="insertUnorderedList"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="format_list_numbered" title="Ordered list" action="insertOrderedList"></iget-editor-toolbar-button>
+</iget-editor-toolbar-group>
+<iget-editor-toolbar-group>
+  <iget-editor-toolbar-button icon="undo" title="Undo" action="undo"></iget-editor-toolbar-button>
+  <iget-editor-toolbar-button icon="redo" title="Redo" action="redo"></iget-editor-toolbar-button>
+</iget-editor-toolbar-group>
+<iget-editor-toolbar-group>
+  <iget-editor-toolbar-button icon="insert_link" title="Insert link" (click)="insertLink()"></iget-editor-toolbar-button>
+  <!-- @todo: Implement image upload -->
+  <!--<iget-editor-toolbar-button icon="insert_photo" title="Insert image" action=""></iget-editor-toolbar-button>-->
+</iget-editor-toolbar-group>
