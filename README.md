@@ -7,14 +7,14 @@
 </p>
 <p align="center">A WYSIWYG Editor for Angular Material applications.</p>
 <p align="center">
-  <a href="https://www.npmjs.com/package/iget-editor">
-    <img alt="npm version" src="https://img.shields.io/npm/v/iget-editor.svg">
+  <a href="https://www.npmjs.com/package/@iget/editor">
+    <img alt="npm version" src="https://img.shields.io/npm/v/@iget/editor.svg">
   </a>
-  <a href="https://www.npmjs.com/package/iget-editor">
-    <img alt="npm" src="https://img.shields.io/npm/dm/iget-editor.svg">
+  <a href="https://www.npmjs.com/package/@iget/editor">
+    <img alt="npm" src="https://img.shields.io/npm/dm/@iget/editor.svg">
   </a>
   <a href="https://github.com/iget-master/iget-editor/blob/master/LICENSE">
-    <img alt="licence" src="https://img.shields.io/npm/l/iget-editor.svg">
+    <img alt="licence" src="https://img.shields.io/npm/l/@iget/editor.svg">
   </a>
 </p>
 
@@ -25,9 +25,9 @@
 Install via Package managers such as [npm][npm] or [yarn][yarn]
 
 ```bash
-npm install iget-editor --save
+npm install @iget/editor --save
 # or
-yarn add iget-editor
+yarn add @iget/editor
 ```
 
 ### Usage
@@ -35,7 +35,7 @@ yarn add iget-editor
 Import `iget-editor` module
 
 ```typescript
-import { IgetEditorModule } from 'iget-editor';
+import { IgetEditorModule } from '@iget/editor';
 
 @NgModule({
   imports: [ IgetEditorModule ]
