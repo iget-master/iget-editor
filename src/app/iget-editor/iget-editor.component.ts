@@ -77,8 +77,8 @@ export class IgetEditorComponent implements OnInit, ControlValueAccessor {
   /** emits `focus` event when focused in to the textarea */
   @Output() focus: EventEmitter<string> = new EventEmitter<string>();
 
-  @ViewChild('igetEditorTextArea') textArea: any;
-  @ViewChild('igetEditorWrapper') ngxWrapper: any;
+  @ViewChild('igetEditorTextArea', {static: true}) textArea: any;
+  @ViewChild('igetEditorWrapper', {static: true}) ngxWrapper: any;
 
   Utils: any = Utils;
 
