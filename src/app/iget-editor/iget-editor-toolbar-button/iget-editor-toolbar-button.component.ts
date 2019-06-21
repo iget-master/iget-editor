@@ -12,6 +12,7 @@ export class IgetEditorToolbarButtonComponent implements OnInit {
   @Input() icon: string;
   @Input() title: string;
   @Input() action: string;
+  @Input() menu = false;
 
   @Output() click: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
