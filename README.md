@@ -34,7 +34,7 @@ yarn add @iget/editor
 
 @angular/angular | @angular/components | @iget/editor
 ---------------- | ------------------- | ------------
-     ^8.0.0      |    ^8.0.0           |    ^3.0.0
+     ^8.0.0      |    ^8.0.0           |    ^2.0.0
      ^9.0.0      |    ^8.0.0           | incompatible
      ^9.0.0      |    ^9.0.0           |    ^9.0.0
 
