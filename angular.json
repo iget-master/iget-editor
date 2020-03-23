@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "iget-editor"
+  "defaultProject": "iget-editor",
+  "cli": {
+    "analytics": "be4aa2c6-97d3-4cb9-b6f9-2622c1b1b822"
+  }
 }

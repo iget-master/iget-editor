@@ -30,6 +30,14 @@ npm install @iget/editor --save
 yarn add @iget/editor
 ```
 
+#### Choosing correct version
+
+@angular/angular | @angular/components | @iget/editor
+---------------- | ------------------- | ------------
+     ^8.0.0      |    ^8.0.0           |    ^3.0.0
+     ^9.0.0      |    ^8.0.0           | incompatible
+     ^9.0.0      |    ^9.0.0           |    ^9.0.0
+
 ### Usage
 
 Import `iget-editor` module

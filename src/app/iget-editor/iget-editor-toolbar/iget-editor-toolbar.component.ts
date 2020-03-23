@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter, OnInit, ViewChild } from '@angu
 import { CommandExecutorService } from '../common/services/command-executor.service';
 import { MessageService } from '../common/services/message.service';
 import * as Utils from '../common/utils/iget-editor.utils';
-import {MatDialog} from '@angular/material';
 import {LinkDialogComponent} from '../dialogs/link-dialog/link-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'iget-editor-toolbar',
