@@ -16,8 +16,8 @@ export class AppComponent {
     height: '10rem',
     minHeight: '5rem',
     placeholder: 'Type something. Test the Editor... ヽ(^。^)丿',
-    translate: 'no'
+    translate: 'no',
   };
 
-  htmlContent = '';
+  htmlContent = '<p>Some sample html</p>';
 }

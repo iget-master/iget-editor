@@ -1,9 +1,11 @@
-<button mat-icon-button [title]="title" (click)="handleClick($event)" *ngIf="menu" [matMenuTriggerFor]="menu">
-    <mat-icon>{{ icon }}</mat-icon>
-</button>
 <button mat-icon-button [title]="title" (click)="handleClick($event)" *ngIf="!menu">
     <mat-icon>{{ icon }}</mat-icon>
 </button>
-<mat-menu #menu="matMenu" *ngIf="menu">
-    <ng-content select="[mat-menu-item]"></ng-content>
-</mat-menu>
+<ng-container *ngIf="menu">
+  <button mat-icon-button [title]="title" (click)="handleClick($event)" *ngIf="menu" [matMenuTriggerFor]="dropdown">
+    <mat-icon>{{ icon }}</mat-icon>
+  </button>
+  <mat-menu #dropdown="matMenu">
+    <ng-content select="[mat-menu-item],[matMenuContent]"></ng-content>
+  </mat-menu>
+</ng-container>

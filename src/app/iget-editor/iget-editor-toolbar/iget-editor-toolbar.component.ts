@@ -4,6 +4,8 @@ import { MessageService } from '../common/services/message.service';
 import * as Utils from '../common/utils/iget-editor.utils';
 import {LinkDialogComponent} from '../dialogs/link-dialog/link-dialog.component';
 import {MatDialog} from '@angular/material/dialog';
+import {ToolbarConfig} from '../iget-editor-config';
+import {COLOR_PALETTE} from './color-palette';
 
 @Component({
   selector: 'iget-editor-toolbar',
@@ -21,11 +23,12 @@ export class IgetEditorToolbarComponent implements OnInit {
   /**
    * Editor configuration
    */
-  @Input() config: any;
+  @Input() config: ToolbarConfig;
   /**
    * Emits an event when a toolbar button is clicked
    */
   @Output() execute: EventEmitter<string> = new EventEmitter<string>();
+  colors = COLOR_PALETTE;
 
   constructor(private _messageService: MessageService,
     private _commandExecutorService: CommandExecutorService,
@@ -80,6 +83,16 @@ export class IgetEditorToolbarComponent implements OnInit {
         });
       }
     });
+  }
+
+  /** insert text/background color */
+  setTextColor(color: string): void {
+    this.insertColor(color, 'textColor');
+  }
+
+  /** insert text/background color */
+  setBackgroundColor(color: string): void {
+    this.insertColor(color, 'backgroundColor');
   }
 
   /** insert text/background color */

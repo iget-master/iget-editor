@@ -2,9 +2,35 @@
 
 :host {
   display: flex;
+  flex-wrap: wrap;
   @include mat-elevation(2);
 }
 .mat-button {
   padding: 0;
   min-width: 36px;
+}
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  width: 180px;
+  margin: 0 8px;
+  > span {
+    &:not(.separator) {
+      width: calc(12.5% - 2px);
+      display: block;
+      height: auto;
+      padding-top: calc(12.5% - 2px);
+      cursor: pointer;
+      border: 1px solid white;
+      &:hover {
+        border-color: black;
+      }
+    }
+
+    &.separator {
+      width: 100%;
+      height: 4px;
+    }
+  }
 }

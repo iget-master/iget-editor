@@ -21,28 +21,6 @@ export function canEnableToolbarOptions(value: string, toolbar: any): boolean {
 }
 
 /**
- * set editor configuration
- *
- * @param value configuration via [config] property
- * @param IgetEditorConfig default editor configuration
- * @param input direct configuration inputs via directives
- */
-export function getEditorConfiguration(value: any, IgetEditorConfig: any, input: any): any {
-  for (const i in IgetEditorConfig) {
-    if (i) {
-      if (input[i] !== undefined) {
-        value[i] = input[i];
-      }
-      if (!value.hasOwnProperty(i)) {
-        value[i] = IgetEditorConfig[i];
-      }
-    }
-  }
-
-  return value;
-}
-
-/**
  * return vertical if the element is the resizer property is set to basic
  *
  * @param resizer type of resizer, either basic or stack

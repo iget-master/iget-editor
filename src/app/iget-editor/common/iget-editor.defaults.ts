@@ -1,7 +1,9 @@
 /**
  * toolbar default configuration
  */
-export const IgetEditorConfig = {
+import {IgetEditorConfig} from '../iget-editor-config';
+
+export const DefaultIgetEditorConfig: IgetEditorConfig = {
   editable: true,
   spellcheck: true,
   height: 'auto',
@@ -12,13 +14,12 @@ export const IgetEditorConfig = {
   enableToolbar: true,
   showToolbar: true,
   placeholder: 'Enter text here...',
-  imageEndPoint: '',
   toolbar: [
-    ['bold', 'italic', 'underline', 'strikeThrough', 'superscript', 'subscript'],
-    ['fontName', 'fontSize', 'color'],
-    ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'indent', 'outdent'],
-    ['cut', 'copy', 'delete', 'removeFormat', 'undo', 'redo'],
-    ['paragraph', 'blockquote', 'removeBlockquote', 'horizontalLine', 'orderedList', 'unorderedList'],
-    ['link', 'unlink', 'image', 'video']
+    ['bold', 'italic', 'underline', 'strikethrough'],
+    ['font', 'fontSize', 'textColor', 'fillColor', 'removeFormat'],
+    ['align'],
+    ['indent', 'quote', 'unorderedList', 'orderedList'],
+    ['undo', 'redo'],
+    ['anchor']
   ]
 };

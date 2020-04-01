@@ -2,9 +2,8 @@
 @import '~@angular/material/theming';
 
 :host {
-  &:not(:first-child) {
-    padding-left: 4px;
-  }
+  padding-left: 4px;
+  margin-bottom: 2px;
 
   &:not(:last-child) {
     padding-right: 4px;
