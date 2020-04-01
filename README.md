@@ -26,17 +26,18 @@ Install via Package managers such as [npm][npm] or [yarn][yarn]
 
 ```bash
 npm install @iget/editor --save
-# or
-yarn add @iget/editor
 ```
 
 #### Choosing correct version
 
+Since v9.0.0 our version matches with the Angular & Angular Components
+version that it support. See the compatibility table:
+
 @angular/angular | @angular/components | @iget/editor
 ---------------- | ------------------- | ------------
-     ^8.0.0      |    ^8.0.0           |    ^2.0.0
-     ^9.0.0      |    ^8.0.0           | incompatible
      ^9.0.0      |    ^9.0.0           |    ^9.0.0
+     ^9.0.0      |    ^8.0.0           | incompatible
+     ^8.0.0      |    ^8.0.0           |    ^2.0.0
 
 ### Usage
 
@@ -57,10 +58,10 @@ Import [Material Icon font](https://material.io/tools/icons/) into your applicat
 Then insert the editor on your template
 
 ```html
-<iget-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="htmlContent"></iget-editor>
+<iget-editor [(ngModel)]="htmlContent"></iget-editor>
 ```
 
-For `ngModel` to work, You must import `FormsModule` from `@angular/forms`
+For `ngModel` to work, You must import `FormsModule` from `@angular/forms`.
 
 ## Compatibility
 
@@ -77,8 +78,9 @@ Demo at stackblitz [iget-editor](https://iget-editor.stackblitz.io/)
 
 ## Documentation
 
-The documentation was not updated yet after migrating `ngx-editor` to `iget-editor`.
-<strike>Documentation is auto-generated using [compodoc][compodoc], and can be viewed here: [https://iget-master.github.io/iget-editor/](https://iget-master.github.io/iget-editor/)</strike>
+For more information about usage, check out [Documentation](https://iget-master.github.io/iget-editor/).
+
+The documentation is auto-generated using [compodoc][compodoc]
 
 ## Thanks to
 
@@ -87,5 +89,4 @@ This package is based on [ngx-editor](https://github.com/sibiraj-s/ngx-editor) f
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/lang/en/
 [github]: https://iget-master.github.io/
-[wiki]:https://github.com/iget-master/iget-editor/wiki/IgetEditor
 [compodoc]: https://compodoc.github.io/website/

@@ -2,14 +2,14 @@
 
 Toolbar option is an array of arrays. The default is
 
-```JSON
+```js
 [
-    ["bold", "italic", "underline", "strikeThrough", "superscript", "subscript"],
-    ["fontSize", "color"],
-    ["justifyLeft", "justifyCenter", "justifyRight", "justifyFull", "indent", "outdent"],
-    ["cut", "copy", "delete", "removeFormat", "undo", "redo"],
-    ["paragraph", "blockquote", "removeBlockquote", "horizontalLine", "orderedList", "unorderedList"],
-    ["link", "unlink", "image"]
+  ['bold', 'italic', 'underline', 'strikethrough'],
+  ['font', 'fontSize', 'textColor', 'fillColor', 'removeFormat'],
+  ['align'],
+  ['indent', 'quote', 'unorderedList', 'orderedList'],
+  ['undo', 'redo'],
+  ['anchor']
 ]
 ```
 
@@ -17,13 +17,13 @@ and it can be customized. Each array represents a button group and the value rep
 
 Toolbar is provided with the editor configuration as
 
-```JSON
+```js
 {
-  "toolbar": [
-     ["bold", "italic", "underline", "strikeThrough"],
-     ["justifyLeft", "justifyRight", "justifyFull" "outdent"]
+  'toolbar': [
+     ['bold', 'italic', 'underline', 'strikethrough'],
+     ['font', 'fontSize', 'textColor', 'fillColor', 'removeFormat'],
   ]
 }
 ```
 
-Providing empty toolbar array will enable all default buttons
+Providing empty toolbar array will remove all buttons.

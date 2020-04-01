@@ -2,20 +2,15 @@
 
 ## Peer Dependencies
 
-You must install all the following `peerDependencies` in order for `iget-editor to work
+You must install all the following `peerDependencies` in order for `@iget/editor` to work:
 
-* [FontAwesome v4.7.0](https://fontawesome.com/v4.7.0/) - Toolbar icons
-* [NgxBootstrap](https://valor-software.com/ngx-bootstrap/) - Popover
-
-## Note
-
-* `ngx-bootstrap` is a mandatory peerDependency which needs to be installed and there is no need for them to be imported.
+* `angular/angular: "^9.0.0"`
+* `angular/material: "^9.0.0"`
 
 ## Modules
 
-For `ngModel` and `image upload` work properly, you must inlcude `FormsModule` and `HttpClientModule` respectively in your project.
+For `ngModel` work properly, you must include `FormsModule` respectively in the same module that imports `IgetEditorModule`.
 
 ```ts
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 ```

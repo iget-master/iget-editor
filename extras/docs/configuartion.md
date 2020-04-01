@@ -10,28 +10,27 @@ The Configuration can be provided using `config` property
 
 ### Default Configuration
 
-The config property is a JSON object.
+The config property is a Object that implements [`IgetEditorConfig`](https://github.com/iget-master/iget-editor/blob/master/src/app/iget-editor/iget-editor-config.d.ts) interface. The default configuration is:
 
-```JSON
+```js
 {
-    "editable": true,
-    "spellcheck": true,
-    "height": "auto",
-    "minHeight": "0",
-    "width": "auto",
-    "minWidth": "0",
-    "translate": "yes",
-    "enableToolbar": true,
-    "showToolbar": true,
-    "placeholder": "Enter text here...",
-    "imageEndPoint": "",
-    "toolbar": [
-        ["bold", "italic", "underline", "strikeThrough", "superscript", "subscript"],
-        ["fontName", "fontSize", "color"],
-        ["justifyLeft", "justifyCenter", "justifyRight", "justifyFull", "indent", "outdent"],
-        ["cut", "copy", "delete", "removeFormat", "undo", "redo"],
-        ["paragraph", "blockquote", "removeBlockquote", "horizontalLine", "orderedList", "unorderedList"],
-        ["link", "unlink", "image", "video"]
-    ]
+  editable: true,
+  spellcheck: true,
+  height: 'auto',
+  minHeight: '0',
+  width: 'auto',
+  minWidth: '0',
+  translate: 'yes',
+  enableToolbar: true,
+  showToolbar: true,
+  placeholder: 'Enter text here...',
+  toolbar: [
+    ['bold', 'italic', 'underline', 'strikethrough'],
+    ['font', 'fontSize', 'textColor', 'fillColor', 'removeFormat'],
+    ['align'],
+    ['indent', 'quote', 'unorderedList', 'orderedList'],
+    ['undo', 'redo'],
+    ['anchor']
+  ]
 }
 ```
