@@ -16,6 +16,7 @@
   <a href="https://github.com/iget-master/iget-editor/blob/master/LICENSE">
     <img alt="licence" src="https://img.shields.io/npm/l/@iget/editor.svg">
   </a>
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PG6CGJ9TQPSFL"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"></a>
 </p>
 
 ## Getting Started
