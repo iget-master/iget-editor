@@ -16,10 +16,12 @@
   <a href="https://github.com/iget-master/iget-editor/blob/master/LICENSE">
     <img alt="licence" src="https://img.shields.io/npm/l/@iget/editor.svg">
   </a>
-  
-  [![CircleCI](https://circleci.com/gh/iget-master/iget-editor.svg?style=svg)](https://circleci.com/gh/iget-master/iget-editor)
-  
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PG6CGJ9TQPSFL"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"></a>
+  <a href="https://circleci.com/gh/iget-master/iget-editor">
+    <img alt="CircleCI" src="https://circleci.com/gh/iget-master/iget-editor.svg?style=svg">
+  </a>
+</p>
+<p align="center">
+  Help us keeping this project</br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PG6CGJ9TQPSFL"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"></a>
 </p>
 
 ## Getting Started
