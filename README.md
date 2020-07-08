@@ -41,6 +41,7 @@ version that it support. See the compatibility table:
 
 @angular/angular | @angular/components | @iget/editor
 ---------------- | ------------------- | ------------
+     ^10.0.0      |    ^10.0.0           |    ^10.0.0
      ^9.0.0      |    ^9.0.0           |    ^9.0.0
      ^9.0.0      |    ^8.0.0           | incompatible
      ^8.0.0      |    ^8.0.0           |    ^2.0.0
