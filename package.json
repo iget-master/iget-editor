@@ -17,7 +17,7 @@
     "prerelease": "npm run build",
     "publish:docs": "node ./scripts/publishdocs.js",
     "release": "sh ./scripts/release.sh",
-    "start": "ng serve --aot -o --port 5000 --host 0.0.0.0",
+    "start": "ng serve -o --port 5000 --host 0.0.0.0",
     "serve:docs": "compodoc --serve --open --output=\"docs/\"",
     "test": "ng test",
     "test:single-run": "ng test --watch false"
