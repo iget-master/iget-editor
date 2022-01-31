@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IgetEditorToolbarComponent } from './iget-editor-toolbar.component';
@@ -16,7 +16,7 @@ describe('IgetEditorToolbarComponent', () => {
   let component: IgetEditorToolbarComponent;
   let fixture: ComponentFixture<IgetEditorToolbarComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
