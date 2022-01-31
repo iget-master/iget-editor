@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IgetEditorToolbarButtonComponent } from './iget-editor-toolbar-button.component';
 import { CommandExecutorService } from '../common/services/command-executor.service';
 import { MessageService } from '../common/services/message.service';
@@ -30,7 +30,7 @@ describe('IgetEditorToolbarButtonComponent', () => {
   let buttonEl;
   let iconEl;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         MatIconModule,

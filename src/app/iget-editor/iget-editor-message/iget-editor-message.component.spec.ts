@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IgetEditorMessageComponent } from './iget-editor-message.component';
 import { MessageService } from '../common/services/message.service';
@@ -7,7 +7,7 @@ describe('IgetEditorMessageComponent', () => {
   let component: IgetEditorMessageComponent;
   let fixture: ComponentFixture<IgetEditorMessageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       providers: [MessageService],
       declarations: [IgetEditorMessageComponent]
