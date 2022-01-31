@@ -1,5 +1,13 @@
 # Changelog
 
+## v11.0.0
+
+* Make compatible with Angular 11
+
+## v10.0.0
+
+* Make compatible with Angular 10
+
 ## v9.1.0
 
 ### Features
