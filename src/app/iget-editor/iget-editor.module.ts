@@ -17,33 +17,28 @@ import {CommandExecutorService} from './common/services/command-executor.service
 import {MessageService} from './common/services/message.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    MatIconModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatInputModule,
-  ],
-  declarations: [
-    IgetEditorComponent,
-    IgetEditorGrippieComponent,
-    IgetEditorMessageComponent,
-    IgetEditorToolbarComponent,
-    IgetEditorToolbarGroupComponent,
-    IgetEditorToolbarButtonComponent,
-
-    /** Dialogs */
-    LinkDialogComponent,
-  ],
-  entryComponents: [
-    /** Dialogs */
-    LinkDialogComponent,
-  ],
-  exports: [IgetEditorComponent],
-  providers: [CommandExecutorService, MessageService]
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        MatIconModule,
+        MatButtonModule,
+        MatMenuModule,
+        MatInputModule,
+    ],
+    declarations: [
+        IgetEditorComponent,
+        IgetEditorGrippieComponent,
+        IgetEditorMessageComponent,
+        IgetEditorToolbarComponent,
+        IgetEditorToolbarGroupComponent,
+        IgetEditorToolbarButtonComponent,
+        /** Dialogs */
+        LinkDialogComponent,
+    ],
+    exports: [IgetEditorComponent],
+    providers: [CommandExecutorService, MessageService]
 })
 
 export class IgetEditorModule { }
