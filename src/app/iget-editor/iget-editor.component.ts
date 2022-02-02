@@ -67,12 +67,12 @@ export class IgetEditorComponent implements OnInit, OnChanges, AfterViewInit, Co
 
   /**
    * Executed from the contenteditable section while the input property changes
-   * @param html html string from contenteditable
    */
-  onContentChange(innerHTML: string): void {
+  onContentChange($event: Event): void {
+    const innerHtml = ($event.target as HTMLElement).innerHTML;
     if (typeof this.onChange === 'function') {
-      this.onChange(innerHTML);
-      this.togglePlaceholder(innerHTML);
+      this.onChange(innerHtml);
+      this.togglePlaceholder(innerHtml);
     }
   }
 

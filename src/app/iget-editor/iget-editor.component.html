@@ -6,7 +6,7 @@
 
   <!-- text area -->
   <div class="iget-editor-wrapper" #igetEditorWrapper>
-    <div class="iget-editor-textarea" [class.show-placeholder]="showPlaceholder" [attr.contenteditable]="config.editable" (input)="onContentChange($event.target.innerHTML)"
+    <div class="iget-editor-textarea" [class.show-placeholder]="showPlaceholder" [attr.contenteditable]="config.editable" (input)="onContentChange($event)"
       [attr.translate]="config['translate']" [attr.spellcheck]="config.spellcheck" [style.height]="config.height"
       [style.minHeight]="config['minHeight']" [style.resize]="'none'" (focus)="onTextAreaFocus()"
       (blur)="onTextAreaBlur()" [innerHTML]="value" #igetEditorTextArea></div>
@@ -20,5 +20,5 @@
   </iget-editor-toolbar>
 
   <iget-editor-message></iget-editor-message>
-  <iget-editor-grippie></iget-editor-grippie>
+  <iget-editor-grippie (resize)="resizeTextArea($event)"></iget-editor-grippie>
 </div>

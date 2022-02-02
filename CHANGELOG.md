@@ -1,5 +1,9 @@
 # Changelog
 
+## v13.0.0
+
+* Make compatible with Angular 13
+
 ## v12.0.1
 
 * Rename interface file to remove `.d` suffix to include it in bundle

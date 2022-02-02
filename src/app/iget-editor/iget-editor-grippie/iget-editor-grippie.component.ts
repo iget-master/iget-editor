@@ -1,5 +1,4 @@
-import { Component, HostListener } from '@angular/core';
-import { IgetEditorComponent } from '../iget-editor.component';
+import {Component, EventEmitter, HostListener, Output} from '@angular/core';
 
 @Component({
   selector: 'iget-editor-grippie',
@@ -15,12 +14,12 @@ export class IgetEditorGrippieComponent {
   /** set to true on mousedown event */
   grabber = false;
 
+  @Output() resize: EventEmitter<number>;
+
   /**
    * Constructor
-   *
-   * @param _editorComponent Editor component
    */
-  constructor(private _editorComponent: IgetEditorComponent) { }
+  constructor() { }
 
   /**
    *
@@ -33,7 +32,7 @@ export class IgetEditorGrippieComponent {
       return;
     }
 
-    this._editorComponent.resizeTextArea(event.clientY - this.oldY);
+    this.resize.emit(event.clientY - this.oldY);
     this.oldY = event.clientY;
   }
 
