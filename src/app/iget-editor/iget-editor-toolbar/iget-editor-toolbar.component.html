@@ -1,45 +1,45 @@
 <iget-editor-toolbar-group *ngFor="let group of config">
   <ng-container *ngFor="let button of group">
-    <iget-editor-toolbar-button *ngIf="button == 'bold'" icon="format_bold" title="Bold" (click)="triggerCommand('bold')"></iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'italic'" icon="format_italic" title="Italic" (click)="triggerCommand('italic')"></iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'underline'" icon="format_underline" title="Underline" (click)="triggerCommand('underline')"></iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'strikethrough'" icon="format_strikethrough" title="Strikethrough" (click)="triggerCommand('strikethrough')"></iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'font'" icon="font_download" title="Font Family" [menu]="true">
+    <iget-editor-toolbar-button *ngIf="button === 'bold'" icon="format_bold" title="Bold" (click)="triggerCommand('bold')"></iget-editor-toolbar-button>
+    <iget-editor-toolbar-button *ngIf="button === 'italic'" icon="format_italic" title="Italic" (click)="triggerCommand('italic')"></iget-editor-toolbar-button>
+    <iget-editor-toolbar-button *ngIf="button === 'underline'" icon="format_underline" title="Underline" (click)="triggerCommand('underline')"></iget-editor-toolbar-button>
+    <iget-editor-toolbar-button *ngIf="button === 'strikethrough'" icon="format_strikethrough" title="Strikethrough" (click)="triggerCommand('strikethrough')"></iget-editor-toolbar-button>
+    <iget-editor-toolbar-button *ngIf="button === 'font'" icon="font_download" title="Font Family" [menu]="true">
       <button mat-menu-item (click)="setFontName('sans-serif')" [style.fontFamily]="'sans-serif'">Sans-serif</button>
       <button mat-menu-item (click)="setFontName('serif')" [style.fontFamily]="'serif'">Serif</button>
       <button mat-menu-item (click)="setFontName('monospace')" [style.fontFamily]="'monospace'">Monospace</button>
     </iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'fontSize'" icon="format_size" title="Font size" [menu]="true">
+    <iget-editor-toolbar-button *ngIf="button === 'fontSize'" icon="format_size" title="Font size" [menu]="true">
       <button mat-menu-item (click)="setFontSize('10')" [style.fontSize]="'10px'">Small</button>
       <button mat-menu-item (click)="setFontSize('13')" [style.fontSize]="'13px'">Regular</button>
       <button mat-menu-item (click)="setFontSize('18')" [style.fontSize]="'18px'">Large</button>
       <button mat-menu-item (click)="setFontSize('32')" [style.fontSize]="'32px'">Huge</button>
     </iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'textColor'" icon="format_color_text" title="Text color" [menu]="true">
+    <iget-editor-toolbar-button *ngIf="button === 'textColor'" icon="format_color_text" title="Text color" [menu]="true">
       <div class="colors" matMenuContent>
         <span *ngFor="let color of colors" [style.backgroundColor]="color" [class.separator]="!color" (click)="setTextColor(color)"></span>
       </div>
     </iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'fillColor'" icon="format_color_fill" title="Fill color" [menu]="true">
+    <iget-editor-toolbar-button *ngIf="button === 'fillColor'" icon="format_color_fill" title="Fill color" [menu]="true">
       <div class="colors" matMenuContent>
         <span *ngFor="let color of colors" [style.backgroundColor]="color" [class.separator]="!color" (click)="setBackgroundColor(color)"></span>
       </div>
     </iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'removeFormat'" icon="format_clear" title="Clear formatting" (click)="triggerCommand('removeFormat')"></iget-editor-toolbar-button>
-    <ng-container *ngIf="button == 'align'">
+    <iget-editor-toolbar-button *ngIf="button === 'removeFormat'" icon="format_clear" title="Clear formatting" (click)="triggerCommand('removeFormat')"></iget-editor-toolbar-button>
+    <ng-container *ngIf="button === 'align'">
       <iget-editor-toolbar-button icon="format_align_left" title="Align left" (click)="triggerCommand('justifyLeft')"></iget-editor-toolbar-button>
       <iget-editor-toolbar-button icon="format_align_center" title="Align center" (click)="triggerCommand('justifyCenter')"></iget-editor-toolbar-button>
       <iget-editor-toolbar-button icon="format_align_right" title="Align right" (click)="triggerCommand('justifyRight')"></iget-editor-toolbar-button>
       <iget-editor-toolbar-button icon="format_align_justify" title="Justify" (click)="triggerCommand('justifyFull')"></iget-editor-toolbar-button>
     </ng-container>
-    <ng-container *ngIf="button == 'indent'">
+    <ng-container *ngIf="button === 'indent'">
       <iget-editor-toolbar-button icon="format_indent_decrease" title="Outdent" (click)="triggerCommand('outdent')"></iget-editor-toolbar-button>
       <iget-editor-toolbar-button icon="format_indent_increase" title="Indent" (click)="triggerCommand('indent')"></iget-editor-toolbar-button>
     </ng-container>
-    <iget-editor-toolbar-button *ngIf="button == 'quote'" icon="format_quote" title="Blockquote" (click)="triggerCommand('blockquote')"></iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'unorderedList'" icon="format_list_bulleted" title="Unordered list" (click)="triggerCommand('insertUnorderedList')"></iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'orderedList'" icon="format_list_numbered" title="Ordered list" (click)="triggerCommand('insertOrderedList')"></iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'undo'" icon="undo" title="Undo" (click)="triggerCommand('undo')"></iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'redo'" icon="redo" title="Redo" (click)="triggerCommand('redo')"></iget-editor-toolbar-button>
-    <iget-editor-toolbar-button *ngIf="button == 'anchor'" icon="insert_link" title="Insert link" (click)="insertLink()"></iget-editor-toolbar-button>
+    <iget-editor-toolbar-button *ngIf="button === 'quote'" icon="format_quote" title="Blockquote" (click)="triggerCommand('blockquote')"></iget-editor-toolbar-button>
+    <iget-editor-toolbar-button *ngIf="button === 'unorderedList'" icon="format_list_bulleted" title="Unordered list" (click)="triggerCommand('insertUnorderedList')"></iget-editor-toolbar-button>
+    <iget-editor-toolbar-button *ngIf="button === 'orderedList'" icon="format_list_numbered" title="Ordered list" (click)="triggerCommand('insertOrderedList')"></iget-editor-toolbar-button>
+    <iget-editor-toolbar-button *ngIf="button === 'undo'" icon="undo" title="Undo" (click)="triggerCommand('undo')"></iget-editor-toolbar-button>
+    <iget-editor-toolbar-button *ngIf="button === 'redo'" icon="redo" title="Redo" (click)="triggerCommand('redo')"></iget-editor-toolbar-button>
+    <iget-editor-toolbar-button *ngIf="button === 'anchor'" icon="insert_link" title="Insert link" (click)="insertLink()"></iget-editor-toolbar-button>
   </ng-container>
