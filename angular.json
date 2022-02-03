@@ -83,6 +83,15 @@
               "src/assets"
             ]
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -101,12 +110,22 @@
               "devServerTarget": "iget-editor:serve:production"
             }
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "e2e//**/*.ts",
+              "e2e//**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "defaultProject": "iget-editor",
   "cli": {
-    "analytics": "be4aa2c6-97d3-4cb9-b6f9-2622c1b1b822"
+    "analytics": "be4aa2c6-97d3-4cb9-b6f9-2622c1b1b822",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }

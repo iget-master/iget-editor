@@ -1,14 +1,18 @@
 {
-  "extends": "../tsconfig.base.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "types": []
+    "baseUrl": "./",
+    "types": [],
+    "allowSyntheticDefaultImports": true
   },
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts",
-    "app.module.ts",
-    "app.component.ts",
-    "app.service.ts"
+  "angularCompilerOptions": {
+  },
+  "files": [
+    "main.ts",
+    "polyfills.ts"
+  ],
+  "include": [
+    "**/*.d.ts"
   ]
 }
