@@ -14,7 +14,7 @@ export class IgetEditorGrippieComponent {
   /** set to true on mousedown event */
   grabber = false;
 
-  @Output() resize: EventEmitter<number>;
+  @Output() resized: EventEmitter<number>;
 
   /**
    * Constructor
@@ -32,7 +32,7 @@ export class IgetEditorGrippieComponent {
       return;
     }
 
-    this.resize.emit(event.clientY - this.oldY);
+    this.resized.emit(event.clientY - this.oldY);
     this.oldY = event.clientY;
   }
 

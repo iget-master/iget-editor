@@ -26,10 +26,10 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 export class IgetEditorComponent implements OnInit, OnChanges, AfterViewInit, ControlValueAccessor {
   @Input() config: IgetEditorConfig;
 
-  /** emits `blur` event when focused out from the textarea */
-  @Output() blur: EventEmitter<string> = new EventEmitter<string>();
-  /** emits `focus` event when focused in to the textarea */
-  @Output() focus: EventEmitter<string> = new EventEmitter<string>();
+  /** emits `blured` event when focused out from the textarea */
+  @Output() blured: EventEmitter<string> = new EventEmitter<string>();
+  /** emits `focused` event when focused in to the textarea */
+  @Output() focused: EventEmitter<string> = new EventEmitter<string>();
 
   @ViewChild('igetEditorTextArea') textArea: any;
   @ViewChild('igetEditorWrapper') wrapper: any;
@@ -57,7 +57,7 @@ export class IgetEditorComponent implements OnInit, OnChanges, AfterViewInit, Co
    * events
    */
   onTextAreaFocus(): void {
-    this.focus.emit('focus');
+    this.focused.emit('focus');
   }
 
   /** focus the text area when the editor is focussed */
@@ -83,7 +83,7 @@ export class IgetEditorComponent implements OnInit, OnChanges, AfterViewInit, Co
     if (typeof this.onTouched === 'function') {
       this.onTouched();
     }
-    this.blur.emit('blur');
+    this.blured.emit('blur');
   }
 
   /**

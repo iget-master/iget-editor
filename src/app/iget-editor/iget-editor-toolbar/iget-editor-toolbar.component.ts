@@ -14,7 +14,7 @@ import {COLOR_PALETTE} from './color-palette';
   providers: []
 })
 
-export class IgetEditorToolbarComponent implements OnInit {
+export class IgetEditorToolbarComponent {
   /** font family name */
   fontName = '';
   /** font size */
@@ -120,8 +120,5 @@ export class IgetEditorToolbarComponent implements OnInit {
     } catch (error) {
       this._messageService.sendMessage(error.message);
     }
-  }
-
-  ngOnInit() {
   }
 }

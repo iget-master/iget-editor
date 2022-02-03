@@ -12,10 +12,10 @@ export class IgetEditorToolbarButtonComponent {
   @Input() title: string;
   @Input() menu = false;
 
-  @Output() click: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
+  @Output() clicked: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
   handleClick($event: MouseEvent) {
-    this.click.emit($event);
+    this.clicked.emit($event);
 
     $event.stopPropagation();
   }

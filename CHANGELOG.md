@@ -1,5 +1,9 @@
 # Changelog
 
+## v13.1.0
+
+* Renamed outputs: `blur` to `blured` and `focus` to `focused` 
+
 ## v13.0.0
 
 * Make compatible with Angular 13
