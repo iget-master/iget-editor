@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^13.2.1",
+    "@angular-eslint/schematics": "^13.0.1",
     "@angular/animations": "^13.2.1",
     "@angular/cdk": "^12.2.13",
     "@angular/cli": "^13.2.1",
