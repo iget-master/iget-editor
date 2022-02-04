@@ -14,7 +14,7 @@ export class IgetEditorGrippieComponent {
   /** set to true on mousedown event */
   grabber = false;
 
-  @Output() resized: EventEmitter<number>;
+  @Output() resized: EventEmitter<number> = new EventEmitter<number>();
 
   /**
    * Constructor
