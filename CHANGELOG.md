@@ -1,5 +1,9 @@
 # Changelog
 
+## v13.1.1
+
+* Fix missing `@Output` initializer on `IgetEditorGrippieComponent`
+
 ## v13.1.0
 
 * Renamed outputs: `blur` to `blured` and `focus` to `focused` 
