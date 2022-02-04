@@ -1,5 +1,9 @@
 # Changelog
 
+## v13.1.2
+
+* Remove unwanted `console.log` calls
+
 ## v13.1.1
 
 * Fix missing `@Output` initializer on `IgetEditorGrippieComponent`
