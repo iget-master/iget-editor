@@ -1,6 +1,6 @@
 import {
   Component, OnInit, Input, Output, ViewChild,
-  EventEmitter, Renderer2, forwardRef, OnChanges, AfterViewInit
+  EventEmitter, Renderer2, forwardRef, OnChanges
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
@@ -23,7 +23,7 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
   }]
 })
 
-export class IgetEditorComponent implements OnInit, OnChanges, AfterViewInit, ControlValueAccessor {
+export class IgetEditorComponent implements OnInit, OnChanges, ControlValueAccessor {
   @Input() config: IgetEditorConfig;
 
   /** emits `blured` event when focused out from the textarea */
@@ -168,7 +168,4 @@ export class IgetEditorComponent implements OnInit, OnChanges, AfterViewInit, Co
     this.config = Object.assign({}, DefaultIgetEditorConfig, this.config);
   }
 
-  ngAfterViewInit() {
-    console.log('viewInit', this.textArea);
-  }
 }

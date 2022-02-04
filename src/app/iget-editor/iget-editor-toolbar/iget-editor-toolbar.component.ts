@@ -73,7 +73,6 @@ export class IgetEditorToolbarComponent {
         ].join(''));
 
         if (emailPattern.exec(urlLink)) {
-          console.log('é email');
           urlLink = `mailto:${urlLink}`;
         }
 
