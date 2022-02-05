@@ -1,9 +1,11 @@
 // Import theming functions
-@import '~@angular/material/theming';
+@import '@angular/material/theming';
 
 .iget-editor {
   position: relative;
   border: 1px solid mat-color($mat-gray, 300);
+  display: flex;
+  flex-direction: column;
 
   ::ng-deep [contenteditable="true"]:empty:before {
     content: attr(placeholder);
@@ -54,6 +56,13 @@
       .iget-editor-placeholder {
         display: block;
       }
+    }
+  }
+
+  &.toolbar-before {
+    iget-editor-toolbar {
+      order: -1;
+      margin-bottom: 0;
     }
   }
 

@@ -39,14 +39,13 @@ npm install @iget/editor --save
 Since v9.0.0 our version matches with the Angular & Angular Components
 version that it support. See the compatibility table:
 
-@angular/angular | @angular/components | @iget/editor
----------------- |---------------------| ------------
-     ^12.0.0      | ^12.0.0             |    ^12.0.0
-     ^11.0.0      | ^11.0.0             |    ^11.0.0
-     ^10.0.0      | ^10.0.0             |    ^10.0.0
-     ^9.0.0      | ^9.0.0              |    ^9.0.0
-     ^9.0.0      | ^8.0.0              | incompatible
-     ^8.0.0      | ^8.0.0              |    ^2.0.0
+| @angular/angular | @angular/components | @iget/editor |
+| ---------------- | ------------------- | ------------ |
+|     ^12.0.0      | ^12.0.0             |    ^12.0.0   |
+|     ^11.0.0      | ^11.0.0             |    ^11.0.0   |
+|     ^10.0.0      | ^10.0.0             |    ^10.0.0   |
+|     ^9.0.0       | ^9.0.0              |    ^9.0.0    |
+|     ^8.0.0       | ^8.0.0              |    ^2.0.0    |
 
 ### Usage
 
@@ -71,6 +70,7 @@ Then insert the editor on your template
 ```
 
 For `ngModel` to work, You must import `FormsModule` from `@angular/forms`.
+
 
 ## Compatibility
 

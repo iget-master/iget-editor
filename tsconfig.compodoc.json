@@ -1,0 +1,4 @@
+{
+  "include": ["src/app/iget-editor/**/*.ts"],
+  "exclude": []
+}

@@ -7,10 +7,10 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { CommandExecutorService } from './common/services/command-executor.service';
 import { MessageService } from './common/services/message.service';
 
-import { DefaultIgetEditorConfig } from './common/iget-editor.defaults';
+import { DefaultIgetEditorConfig } from './common/default-iget-editor-config';
 import * as Utils from './common/utils/iget-editor.utils';
-import {IgetEditorConfig} from './iget-editor-config';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import {IgetEditorCustomConfig} from './iget-editor-custom-config';
 
 @Component({
   selector: 'iget-editor',
@@ -24,7 +24,7 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 })
 
 export class IgetEditorComponent implements OnInit, OnChanges, ControlValueAccessor {
-  @Input() config: IgetEditorConfig;
+  @Input() config: IgetEditorCustomConfig;
 
   /** emits `blured` event when focused out from the textarea */
   @Output() blured: EventEmitter<string> = new EventEmitter<string>();

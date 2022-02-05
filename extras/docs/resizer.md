@@ -2,4 +2,4 @@
 
 The editor can be resized horizontally using a stack resizer like Stackoverflow.
 
-Currently, it's impossible to disable resizing.
+You can disable the resizer by setting `resizable: false` on the config object.

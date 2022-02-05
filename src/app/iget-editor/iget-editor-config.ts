@@ -17,5 +17,7 @@ export interface IgetEditorConfig {
   enableToolbar: boolean;
   showToolbar: boolean;
   placeholder: string;
+  resizable: boolean;
+  toolbarPosition: 'before'|'after';
   toolbar: ToolbarConfig;
 }

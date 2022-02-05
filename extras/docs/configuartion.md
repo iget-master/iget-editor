@@ -4,13 +4,40 @@ The Configuration can be provided using `config` property
 
 ## Usage
 
+The `IgetEditorComponent` implements the `ControlValueAccessor` interface, so it can be used with `ngModel`, `formControl`, `formControlName` directives:
+
+### ngModel example
+
 ```HTML
-<iget-editor [config]="editorConfig" [(ngModel)]="htmlContent"></iget-editor>
+<iget-editor [(ngModel)]="htmlContent"></iget-editor>
 ```
 
-### Default Configuration
+### formControlName example
 
-The config property is a Object that implements [`IgetEditorConfig`](https://github.com/iget-master/iget-editor/blob/master/src/app/iget-editor/iget-editor-config.d.ts) interface. The default configuration is:
+```HTML
+<div [formGroup]="myFormGroup">
+    <iget-editor formControlName="myControlName"></iget-editor>
+</div>
+```
+
+### Custom configuration
+
+You can override default configuration by passing an object to the `[config]` input:
+
+
+```typescript
+  public myConfig: IgetEditorCustomConfig = {
+    placeholder: 'My Custom Placeholder',
+  }
+```
+
+```HTML
+<iget-editor [config]="myConfig" [(ngModel)]="htmlContent"></iget-editor>
+```
+
+The `[config]` input accepts an object of type [`IgetEditorCustomConfig`](interfaces/IgetEditorConfig.html).
+
+The default configuration is:
 
 ```js
 {
@@ -24,6 +51,8 @@ The config property is a Object that implements [`IgetEditorConfig`](https://git
   enableToolbar: true,
   showToolbar: true,
   placeholder: 'Enter text here...',
+  resizable: true,
+  toolbarPosition: 'after',
   toolbar: [
     ['bold', 'italic', 'underline', 'strikethrough'],
     ['font', 'fontSize', 'textColor', 'fillColor', 'removeFormat'],

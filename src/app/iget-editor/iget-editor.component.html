@@ -1,7 +1,8 @@
 <div class="iget-editor"
      tabindex="0"
-     [style.width]="config['width']"
-     [style.minWidth]="config['minWidth']"
+     [style.width]="config.width"
+     [style.minWidth]="config.minWidth"
+     [class.toolbar-before]="config.toolbarPosition === 'before'"
      (focus)="onEditorFocus()">
 
   <!-- text area -->
@@ -20,5 +21,5 @@
   </iget-editor-toolbar>
 
   <iget-editor-message></iget-editor-message>
-  <iget-editor-grippie (resized)="resizeTextArea($event)"></iget-editor-grippie>
+  <iget-editor-grippie *ngIf="config.resizable" (resized)="resizeTextArea($event)"></iget-editor-grippie>
 </div>
