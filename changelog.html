@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	      <link rel="stylesheet" href="./styles/style.css">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
     </head>
     <body>
 
@@ -31,12 +32,44 @@
                    <div class="content-data">
 
 <h1 id="changelog">Changelog</h1>
+<h2 id="v1312">v13.1.2</h2>
+<ul>
+<li>Remove unwanted <code>console.log</code> calls</li>
+</ul>
+<h2 id="v1311">v13.1.1</h2>
+<ul>
+<li>Fix missing <code>@Output</code> initializer on <code>IgetEditorGrippieComponent</code></li>
+</ul>
+<h2 id="v1310">v13.1.0</h2>
+<ul>
+<li>Renamed outputs: <code>blur</code> to <code>blured</code> and <code>focus</code> to <code>focused</code></li>
+</ul>
+<h2 id="v1300">v13.0.0</h2>
+<ul>
+<li>Make compatible with Angular 13</li>
+</ul>
+<h2 id="v1201">v12.0.1</h2>
+<ul>
+<li>Rename interface file to remove <code>.d</code> suffix to include it in bundle</li>
+</ul>
+<h2 id="v1200">v12.0.0</h2>
+<ul>
+<li>Make compatible with Angular 12</li>
+</ul>
+<h2 id="v1100">v11.0.0</h2>
+<ul>
+<li>Make compatible with Angular 11</li>
+</ul>
+<h2 id="v1000">v10.0.0</h2>
+<ul>
+<li>Make compatible with Angular 10</li>
+</ul>
 <h2 id="v910">v9.1.0</h2>
 <h3 id="features">Features</h3>
 <ul>
 <li>Added 8x8 color palette for Text and Fill color buttons</li>
 <li>Toolbar configuration now works as intended to do, allowing
-manually set groups and buttons that should be enabled (<a href="https://github.com/iget-master/iget-editor/issues/4">Issue #4</a>)</li>
+ manually set groups and buttons that should be enabled (<a href="https://github.com/iget-master/iget-editor/issues/4">Issue #4</a>)</li>
 <li>Font family button dropdown now shows a sample of each font</li>
 <li>Font size button dropdown now shows a sample of each size</li>
 </ul>
@@ -65,14 +98,15 @@ manually set groups and buttons that should be enabled (<a href="https://github.
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -84,6 +118,15 @@ manually set groups and buttons that should be enabled (<a href="https://github.
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
@@ -93,9 +136,9 @@ manually set groups and buttons that should be enabled (<a href="https://github.
 
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 
