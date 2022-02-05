@@ -1,5 +1,13 @@
 # Changelog
 
+## v13.2.0
+
+|         | Description                                                                    | Issue # |
+|---------|--------------------------------------------------------------------------------|---------|
+| Feature | Allow disabling resizer by passing `resizable: false` on options               |         |
+| Feature | Added `toolbarPosition` option to show toolbar `before` or `after` the content | #10     |
+| Docs    | Refresh and update the documentation                                           |         |
+
 ## v13.1.2
 
 * Remove unwanted `console.log` calls

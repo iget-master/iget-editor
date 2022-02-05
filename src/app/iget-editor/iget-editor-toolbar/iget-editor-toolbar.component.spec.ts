@@ -10,7 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
-import {DefaultIgetEditorConfig} from '../common/iget-editor.defaults';
+import {DefaultIgetEditorConfig} from '../common/default-iget-editor-config';
 
 describe('IgetEditorToolbarComponent', () => {
   let component: IgetEditorToolbarComponent;

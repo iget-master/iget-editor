@@ -14,6 +14,8 @@ export const DefaultIgetEditorConfig: IgetEditorConfig = {
   enableToolbar: true,
   showToolbar: true,
   placeholder: 'Enter text here...',
+  toolbarPosition: 'after',
+  resizable: true,
   toolbar: [
     ['bold', 'italic', 'underline', 'strikethrough'],
     ['font', 'fontSize', 'textColor', 'fillColor', 'removeFormat'],

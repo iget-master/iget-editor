@@ -1,12 +1,14 @@
 {
   "name": "@iget/editor",
-  "version": "13.1.2",
+  "version": "13.2.0",
   "description": "WYSIWYG Editor for Angular Material applications",
   "license": "MIT",
   "scripts": {
     "build": "ng build --configuration production",
     "build:package": "sh ./scripts/build.sh",
-    "docs": "compodoc && npm run publish:docs",
+    "docs:build": "compodoc -p tsconfig.compodoc.json --includes=extras -d dist/docs --disableGraph --disableCoverage --disablePrivate --disableInternal --disableLifeCycleHooks --disableProtected",
+    "docs:publish": "node ./scripts/publishdocs.js",
+    "docs:serve": "npm run docs:build -- --serve --open",
     "e2e": "ng e2e",
     "lint": "ng lint",
     "lint:scripts": "eslint ./scripts",
@@ -15,10 +17,8 @@
     "prebuild": "npm run lint",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run build",
-    "publish:docs": "node ./scripts/publishdocs.js",
     "release": "sh ./scripts/release.sh",
     "start": "ng serve -o --port 5000 --host 0.0.0.0",
-    "serve:docs": "compodoc --serve --open --output=\"docs/\"",
     "test": "ng test",
     "test:single-run": "ng test --watch false"
   },
