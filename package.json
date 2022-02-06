@@ -1,6 +1,6 @@
 {
   "name": "@iget/editor",
-  "version": "13.2.0",
+  "version": "13.2.1",
   "description": "WYSIWYG Editor for Angular Material applications",
   "license": "MIT",
   "scripts": {
