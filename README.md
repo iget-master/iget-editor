@@ -5,7 +5,7 @@
    <img src="https://raw.githubusercontent.com/iget-master/iget-editor/master/src/assets/icons/iget-editor.png" alt="IgetEditor">
   </a>
 </p>
-<p align="center">A WYSIWYG Editor for Angular Material applications.</p>
+<p align="center">A lightweight WYSIWYG Editor for Angular Material applications.</p>
 <p align="center">
   <a href="https://www.npmjs.com/package/@iget/editor">
     <img alt="npm version" src="https://img.shields.io/npm/v/@iget/editor.svg">
@@ -21,10 +21,14 @@
   </a>
 </p>
 <p align="center">
-  Help us keeping this project</br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PG6CGJ9TQPSFL"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"></a>
+  Help me keeping this project alive</br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PG6CGJ9TQPSFL"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"></a>
 </p>
 
 ## Getting Started
+
+This package is a lightweight editor for applications based on Angular Components (*aka Angular Material*). It has zero dependencies, except for the peer dependency on `@angular/angular` and `@angular/components`.
+
+It's compatible with all Evergreen-Browsers
 
 ### Installation
 
@@ -49,7 +53,7 @@ version that it support. See the compatibility table:
 
 ### Usage
 
-Import `iget-editor` module
+Add `IgetEditorModule` to your imports:
 
 ```typescript
 import { IgetEditorModule } from '@iget/editor';
@@ -69,17 +73,7 @@ Then insert the editor on your template
 <iget-editor [(ngModel)]="htmlContent"></iget-editor>
 ```
 
-For `ngModel` to work, You must import `FormsModule` from `@angular/forms`.
-
-
-## Compatibility
-
-All Evergreen-Browsers are supported
-
-* Google Chrome
-* Microsoft Edge
-* Mozilla Firefox
-* Opera
+For `ngModel` work, You must import `FormsModule` from `@angular/forms`.
 
 ## Demo
 
