@@ -1,6 +1,5 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ElementRef, Renderer2 } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { IgetEditorGrippieComponent } from './iget-editor-grippie.component';
 import { IgetEditorComponent } from '../iget-editor.component';
 import { MessageService } from '../common/services/message.service';
@@ -12,7 +11,7 @@ describe('NgxGrippieComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [],
       declarations: [IgetEditorGrippieComponent],
       providers: [
         IgetEditorComponent,
