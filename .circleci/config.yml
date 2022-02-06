@@ -26,8 +26,26 @@ jobs:
           paths:
             - "node_modules"
       - run: npm run test -- --watch=false --progress=false --browsers=ChromeHeadlessCI
+  release:
+    docker:
+      - image: circleci/node:16.13-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: iget-editor-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: npm install
+      - save_cache:
+          key: iget-editor-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+      - run: npm run release
 workflows:
     test:
       jobs:
         - lint
         - test
+    release:
+      jobs:
+        - lint
+        - test
+        - release
