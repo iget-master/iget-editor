@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpRequest } from '@angular/common/http';
 import * as Utils from '../utils/iget-editor.utils';
 
 @Injectable()
@@ -7,11 +6,6 @@ export class CommandExecutorService {
   /** saves the selection from the editor when focussed out */
   savedSelection: any = undefined;
 
-  /**
-   *
-   * @param _http HTTP Client for making http requests
-   */
-  constructor(private _http: HttpClient) { }
 
   /**
    * executes command from the toolbar
@@ -119,25 +113,25 @@ export class CommandExecutorService {
    * @param endPoint enpoint to which the image has to be uploaded
    */
   uploadImage(file: File, endPoint: string): any {
-    if (!endPoint) {
-      throw new Error('Image Endpoint isn`t provided or invalid');
-    }
-
-    const formData: FormData = new FormData();
-
-    if (file) {
-
-      formData.append('file', file);
-
-      const req = new HttpRequest('POST', endPoint, formData, {
-        reportProgress: true
-      });
-
-      return this._http.request(req);
-
-    } else {
-      throw new Error('Invalid Image');
-    }
+    // if (!endPoint) {
+    //   throw new Error('Image Endpoint isn`t provided or invalid');
+    // }
+    //
+    // const formData: FormData = new FormData();
+    //
+    // if (file) {
+    //
+    //   formData.append('file', file);
+    //
+    //   const req = new HttpRequest('POST', endPoint, formData, {
+    //     reportProgress: true
+    //   });
+    //
+    //   return this._http.request(req);
+    //
+    // } else {
+    //   throw new Error('Invalid Image');
+    // }
   }
 
   /**

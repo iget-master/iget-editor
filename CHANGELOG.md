@@ -1,5 +1,12 @@
 # Changelog
 
+## v13.2.1
+
+|         | Description                                       | Issue # |
+|---------|---------------------------------------------------|---------|
+| Fix     | Remove unused `HttpClient` imports and dependency |         |
+
+
 ## v13.2.0
 
 |         | Description                                                                    | Issue # |

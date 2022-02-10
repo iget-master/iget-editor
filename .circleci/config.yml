@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  commitlint: conventional-changelog/commitlint@1.0
 jobs:
   lint:
     docker:
@@ -26,8 +28,68 @@ jobs:
           paths:
             - "node_modules"
       - run: npm run test -- --watch=false --progress=false --browsers=ChromeHeadlessCI
+
+  build:
+    docker:
+      - image: circleci/node:16.13-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: iget-editor-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: npm install
+      - save_cache:
+          key: iget-editor-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+      - run: npm run build
+      - persist_to_workspace:
+          root: ./dist
+          paths:
+            - build
+
+  docs-build:
+    docker:
+      - image: circleci/node:16.13-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: iget-editor-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: npm install
+      - save_cache:
+          key: iget-editor-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+      - run: npm run docs:build
+      - persist_to_workspace:
+          root: ./dist
+          paths:
+            - docs
+
+  release:
+    docker:
+      - image: circleci/node:16.13-browsers
+    steps:
+      - attach_workspace:
+          at: ./dist/build
+      - run: ls dist
+      - run: npm run release
+
 workflows:
-    test:
-      jobs:
-        - lint
-        - test
+  version: 2
+  main:
+    jobs:
+      - commitlint/lint:
+          name: commitlint
+          max-count: 1000
+      - lint
+      - test
+      - release:
+          requires:
+            - commitlint
+            - lint
+            - test
+          filters:
+            branches:
+              only:
+                - main
+

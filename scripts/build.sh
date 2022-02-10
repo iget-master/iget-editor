@@ -1,10 +1,9 @@
 #!/bin/bash
 
 # remove existing builds
-rm -rf build/
-rm -rf dist/
+rm -rf dist/build
 
-# build 
+# build
 ./node_modules/.bin/ng-packagr -p ng-package.json
 
 # delete unwanted folders
