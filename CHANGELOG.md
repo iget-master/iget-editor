@@ -1,6 +1,4 @@
-# Changelog
-
-## [13.2.1](https://github.com/iget-master/iget-editor/compare/v13.2.0...v13.2.1) (2022-02-14)
+## v13.2.1
 
 
 ### Bug Fixes
