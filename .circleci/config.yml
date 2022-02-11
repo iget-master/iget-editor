@@ -81,6 +81,10 @@ workflows:
       - commitlint/lint:
           name: commitlint
           max-count: 1000
+          filters:
+            branches:
+              ignore:
+                - main
       - lint
       - test
       - release:
