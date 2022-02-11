@@ -1,10 +1,16 @@
 version: 2.1
+
+defaults: &defaults
+  working_directory: ~/project
+  docker:
+    - image: circleci/node:16.13-browsers
+
 orbs:
   commitlint: conventional-changelog/commitlint@1.0
+
 jobs:
   lint:
-    docker:
-      - image: circleci/node:16.13-browsers
+    <<: *defaults
     steps:
       - checkout
       - restore_cache:
@@ -16,8 +22,7 @@ jobs:
             - "node_modules"
       - run: npm run lint
   test:
-    docker:
-      - image: circleci/node:16.13-browsers
+    <<: *defaults
     steps:
       - checkout
       - restore_cache:
@@ -28,10 +33,8 @@ jobs:
           paths:
             - "node_modules"
       - run: npm run test -- --watch=false --progress=false --browsers=ChromeHeadlessCI
-
   build:
-    docker:
-      - image: circleci/node:16.13-browsers
+    <<: *defaults
     steps:
       - checkout
       - restore_cache:
@@ -43,13 +46,11 @@ jobs:
             - "node_modules"
       - run: npm run build
       - persist_to_workspace:
-          root: ./dist
+          root: .
           paths:
-            - build
-
+            - dist/build
   docs-build:
-    docker:
-      - image: circleci/node:16.13-browsers
+    <<: *defaults
     steps:
       - checkout
       - restore_cache:
@@ -61,18 +62,27 @@ jobs:
             - "node_modules"
       - run: npm run docs:build
       - persist_to_workspace:
-          root: ./dist
+          root: .
           paths:
-            - docs
-
+            - dist/docs
   release:
-    docker:
-      - image: circleci/node:16.13-browsers
+    <<: *defaults
     steps:
+      - checkout
+      - restore_cache:
+          key: iget-editor-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: npm install
+      - save_cache:
+          key: iget-editor-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
       - attach_workspace:
-          at: ./dist/build
+          at: ~/project
       - run: ls dist
-      - run: npm run release
+      - run: ls dist/build
+      - run:
+          name: release
+          command: npm run semantic-release
 
 workflows:
   version: 2
@@ -87,11 +97,21 @@ workflows:
                 - main
       - lint
       - test
+      - build:
+          requires:
+            - commitlint
+            - lint
+            - test
+          filters:
+            branches:
+              only:
+                - main
       - release:
           requires:
             - commitlint
             - lint
             - test
+            - build
           filters:
             branches:
               only:

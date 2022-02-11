@@ -1,6 +1,6 @@
 {
   "name": "@iget/editor",
-  "version": "13.2.0",
+  "version": "0.0.0-development",
   "description": "WYSIWYG Editor for Angular Material applications",
   "license": "MIT",
   "scripts": {
@@ -14,13 +14,14 @@
     "lint:scripts": "eslint ./scripts",
     "ng": "ng",
     "postbuild": "npm run build:package",
-    "prebuild": "npm run lint",
+    "postversion": "cp -r package.json ../..",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run build",
     "release": "sh ./scripts/release.sh",
     "start": "ng serve -o --port 5000 --host 0.0.0.0",
     "test": "ng test",
-    "test:single-run": "ng test --watch false"
+    "test:single-run": "ng test --watch false",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "angular-editor",
@@ -33,7 +34,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iget-master/iget-editor.git"
+    "url": "https://github.com/iget-master/iget-editor.git"
   },
   "bugs": {
     "url": "https://github.com/iget-master/iget-editor/issues"
@@ -64,6 +65,8 @@
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "@compodoc/compodoc": "^1.1.18",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/jasmine": "^3.10.3",
     "@types/jasminewd2": "^2.0.10",
     "@types/node": "^12.20.42",
@@ -83,6 +86,7 @@
     "postcss": "^8.4.5",
     "protractor": "~7.0.0",
     "rxjs": "^6.6.7",
+    "semantic-release": "^19.0.2",
     "tslib": "^2.3.1",
     "typescript": "~4.5.5",
     "zone.js": "~0.11.4"

@@ -1,5 +1,3 @@
-# Changelog
-
 ## v13.2.1
 
 |         | Description                                       | Issue # |
