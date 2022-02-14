@@ -5,6 +5,6 @@ updates:
     schedule:
       interval: weekly
     commit-message:
-      prefix: fix
+      prefix: chore
       prefix-development: chore
       include: scope
