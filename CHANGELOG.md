@@ -1,9 +1,11 @@
-## v13.2.1
+# Changelog
 
-|         | Description                                       | Issue # |
-|---------|---------------------------------------------------|---------|
-| Fix     | Remove unused `HttpClient` imports and dependency |         |
+## [13.2.1](https://github.com/iget-master/iget-editor/compare/v13.2.0...v13.2.1) (2022-02-14)
 
+
+### Bug Fixes
+
+* remove unused `HttpClient` dependency ([483f371](https://github.com/iget-master/iget-editor/commit/483f3716e7960e1bc6c4866ffd8605386cb78301))
 
 ## v13.2.0
 
